@@ -1,6 +1,6 @@
 import-module activedirectory
 
-# Expand this array to include more departments within HBHE SPH.
+# Expand this array to include more departments within SPH.
 # Subgroups of departments are handled by making a multidimensional array entry.
 $departments = @(
 					"ADM", 
