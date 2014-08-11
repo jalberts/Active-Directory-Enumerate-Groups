@@ -31,8 +31,7 @@ Foreach( $department in $departments ){
 	$groups = Get-ADGroup -Properties * -Filter * -SearchBase "ou=$department,ou=Departments,OU=SPH,OU=Organizations,OU=UMICH,DC=adsroot,DC=itcs,DC=umich,DC=edu" | sort name
 
 	# Output formatted member list for each AD Group
-	Foreach( $group In $groups )
-	{
+	Foreach( $group In $groups ){
 		$group_name_header = $group.Name + "`n-------------"
 		Add-Content -value $group_name_header -Path $OutFile
 		
