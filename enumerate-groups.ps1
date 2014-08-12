@@ -35,7 +35,7 @@ Foreach( $department in $departments ){
 		$group_name_header = $group.Name + "`n-------------"
 		Add-Content -value $group_name_header -Path $OutFile
 		
-		$members = Get-ADGroupMember -Identity $group.Name | sort name | % { $_.Name.split(",")[0] }
+		$members = Get-ADGroupMember -Identity $group.SID | sort name | % { $_.Name.split(",")[0] }
 		
 		foreach( $member in $members) {
 			Add-Content -Value $member -Path $OutFile
