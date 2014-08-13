@@ -1,5 +1,9 @@
 import-module activedirectory
 
+## Consider changing this into a hash table of OU_Name and DN_Prefix for each department of interest.
+## Alternatively, set a $Root_OU variable to serve as the top of a search structure and generalize
+## the entire thing using a Get-ADOrganizationalUnit -Filter * -SearchBase $Root_OU call.
+
 # Expand this array to include more departments within SPH.
 # Subgroups of departments are handled by making a multidimensional array entry.
 $departments = @(
